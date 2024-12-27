@@ -1,20 +1,21 @@
 
 import s from '../imageGallery/ImageGallery.module.css';
 
-const ImageCard = ({images}) => {
-    return (
-          <div className={s.container}>
-            {images.length > 0 ? (
-              images.map((image) => (
-                <div key={image.id}>
-                  <img className={s.image} src={image.urls.small} alt={image.alt_description} />
-                </div>
-              ))
-            ) : (
-              <p>No images found</p>
-            )}
-          </div>
-      );
-};  
+
+const ImageCard = ({ alt_description, urls, updateModalStateData }) => {
+	return (
+		<div
+			className={s.container}
+			onClick={() => updateModalStateData(urls.regular, alt_description)}
+		>
+			<img
+				className={s.image}
+				src={urls.small}
+				alt={alt_description}
+			/>
+			<p className={s.cardDescription}>{alt_description}</p>
+		</div>
+	);
+};
 
 export default ImageCard;
