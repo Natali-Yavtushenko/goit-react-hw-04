@@ -22,7 +22,7 @@ const fetchImages = async (query, page) => {
         });
     
         return response.data; 
-        console.log('Fetched data:', data);
+        
 
     } catch (error) {
       console.error('Error fetching images:', error);

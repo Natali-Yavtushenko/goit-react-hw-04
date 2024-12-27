@@ -31,7 +31,7 @@ function App() {
 			try {
 				setIsLoading(true);
 				setIsError(false);
-				const data = await fetchGalleryPhotos(queryValue, page);
+				const data = await fetchImages(queryValue, page);
 				console.log('data: ', data);
 				if (data.total === 0) return;
 				setGallery((prevGallery) => {
