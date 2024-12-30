@@ -1,5 +1,5 @@
-import React from 'react';
-import s from './Error.module.css'
+import React from "react";
+import s from "./Error.module.css";
 
 const ErrorMessage = ({ message }) => {
   return (
