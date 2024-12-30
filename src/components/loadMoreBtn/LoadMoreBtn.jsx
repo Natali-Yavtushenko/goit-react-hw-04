@@ -1,7 +1,14 @@
+import s from "./LoadMore.module.css";
+
 const LoadMoreBtn = ({ handleLoadMore, isActive }) => {
   return (
     <div className={s.container}>
-      <button className={s.btn} onClick={handleLoadMore} type="button" disabled={isActive}>
+      <button
+        className={s.btn}
+        onClick={handleLoadMore}
+        type="button"
+        disabled={isActive}
+      >
         Load more
       </button>
     </div>
