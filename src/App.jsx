@@ -1,6 +1,5 @@
 import { useEffect, useState, useRef } from "react";
 import SearchBar from "./components/searchBar/SearchBar";
-import "./App.css";
 import fetchImages from "./components/services/ap";
 import ImageGallery from "./components/imageGallery/ImageGallery";
 import ErrorMessage from "./components/errorMessage/ErrorMessage";
