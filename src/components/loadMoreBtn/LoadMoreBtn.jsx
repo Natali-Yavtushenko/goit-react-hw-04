@@ -1,8 +1,10 @@
 const LoadMoreBtn = ({ handleLoadMore, isActive }) => {
   return (
-    <button onClick={handleLoadMore} type="button" disabled={isActive}>
-      Load more
-    </button>
+    <div className={s.container}>
+      <button className={s.btn} onClick={handleLoadMore} type="button" disabled={isActive}>
+        Load more
+      </button>
+    </div>
   );
 };
 

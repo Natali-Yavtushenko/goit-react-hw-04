@@ -15,6 +15,8 @@ function App() {
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
   const [totalPages, setTotalPages] = useState(0);
+  const [modalLikes, setModalLikes] = useState(0);
+  const [modalAuthor, setModalAuthor] = useState("");
 
   const [modalIsOpen, setIsOpen] = useState(false);
   const [modalImage, setModalImage] = useState("");
@@ -71,9 +73,12 @@ function App() {
     setIsOpen(false);
   };
 
-  const updateModalStateData = (src, alt) => {
+  const updateModalStateData = (src, alt, author, likes) => {
     setModalImage(src);
     setAltDescription(alt);
+    setModalAuthor(author);
+    setModalLikes(likes);
+    setIsOpen(true);
   };
 
   return (
@@ -96,6 +101,8 @@ function App() {
         closeModal={closeModal}
         src={modalImage}
         alt={altDescription}
+        author={modalAuthor}
+        likes={modalLikes}
       />
       <Toaster position="top-right" reverseOrder={true} />
     </div>
